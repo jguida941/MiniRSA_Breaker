@@ -22,7 +22,7 @@
 <img src="media/banner.png" alt="MiniRSA_Breaker Banner" align="left" width="300" style="margin-right: 20px;">
 <br>
 
-🌀 **This project enables interactive RSA encryption and decryption**  
+**This project enables interactive RSA encryption and decryption**  
 with full step-by-step visual feedback.
 
 **Build understanding** through math, logic, and real cryptographic theory.  
@@ -32,20 +32,19 @@ with full step-by-step visual feedback.
 
 ### Use it to:
 
-- 📚 **Teach** RSA key concepts  
-- 🔍 **Break down** modular exponentiation  
-- 🛡️ **Compare** weak vs. strong keys  
+-  **Teach** RSA key concepts  
+-  **Break down** modular exponentiation  
+-  **Compare** weak vs. strong keys  
 
 Whether you're a **teacher**, a **CS student**,  
 or just **someone fascinated by how passwords work**,  
 **this tool was built for you.**
 
-> ⚠️ This won't **teach you how** to break secure RSA encryption.  
+> ⚠This won't **teach you how** to break secure RSA encryption.  
 > But with the **right math and curiosity**, that’s a different story. 🔓
 
 
-
-# ⚡ Features
+# Features
 
 **RSA Key Generation**  
 Generate custom or random small prime keys instantly.
@@ -71,27 +70,27 @@ Runs entirely on your device , no web server, no uploads, just fast, secure loca
 **Debug Mode & Educational Hints**  
 Toggle debug mode to show raw values, intermediate results, and contextual explanations at every step.
 
-# 📸 Screenshots
+# Screenshots
 
-### Main Interface RSA Setup: Define primes, generate public/private keys, and view entropy ratings in real time.
+## Main Interface RSA Setup: Define primes, generate public/private keys, and view entropy ratings in real time.
 
 <img width="1195" alt="Screenshot 2025-06-27 at 10 18 09 PM" src="https://github.com/user-attachments/assets/b5174655-6163-4e40-856f-27b8a8a2759c" />
 
 ---
 
-### 🔐 Encryption Panel: Watch your message get encrypted character by character using modular exponentiation.
+## Encryption Panel: Watch your message get encrypted character by character using modular exponentiation.
 
 <img width="1197" alt="Screenshot 2025-06-27 at 10 18 49 PM" src="https://github.com/user-attachments/assets/5da211a7-97e6-44e0-899d-0e331e3bacbf" />
 
 ---
 
-### 🕵️ Decryption Panel: Reverse the cipher text and view RSA logic in reverse using your private key.
+## Decryption Panel: Reverse the cipher text and view RSA logic in reverse using your private key.
 
 <img width="1194" alt="Screenshot 2025-06-27 at 10 19 22 PM" src="https://github.com/user-attachments/assets/40b65622-5c40-4cc8-9fd7-bbe587868c8b" />
 
 ---
 
-## 🚀  How to Run:
+# How to Run:
 
 ### Follow these steps to launch **MiniRSA_Breaker** locally:
 
@@ -163,24 +162,24 @@ while you’re just trying to run a prime test.</p>
 
 <hr>
 
-<h3>📄 License: <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></h3>
+<h3> License: <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></h3>
 
 <p>© 2025 <b>Justin Guida</b><br>
 This project is licensed under the <b>Creative Commons Attribution-NonCommercial 4.0 International License</b>.</p>
 
 <h4>You May:</h4>
 <ul>
-  <li><b>✅Share</b> — Copy, distribute, and share the code</li>
-  <li><b>✅Adapt</b> — Remix, transform, or build upon it for personal or academic purposes</li>
+  <li><b> Share</b> — Copy, distribute, and share the code</li>
+  <li><b> Adapt</b> — Remix, transform, or build upon it for personal or academic purposes</li>
 </ul>
 
 <h4> You May Not:</h4>
 <ul>
-  <li>❌ Use this work for commercial purposes</li>
-  <li>❌ Sell, rebrand, or repackage this project for profit</li>
+  <li> Use this work for commercial purposes</li>
+  <li> Sell, rebrand, or repackage this project for profit</li>
 </ul>
 
-<h4>📢 You Must:</h4>
+<h4> You Must:</h4>
 <ul>
   <li>Credit the original author clearly:</li>
   <ul>
@@ -192,14 +191,14 @@ This project is licensed under the <b>Creative Commons Attribution-NonCommercial
 
 <hr>
 
-## <h3> 🎓Educational Use Terms</h3>
+ <h3> Educational Use Terms</h3>
 <ul>
   <li>Use this tool in lessons, demos, or assignments</li>
   <li>Modify and explore it freely for academic learning</li>
   <li>Ensure visible credit appears in repurposed or adapted materials</li>
 </ul>
 
-<h3> 🧠 Learn from the Best:</h3>
+<h3> Learn from the Best:</h3>
 <ul>
   <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp: Scientific Python</a></li>
   <li><a href="https://cs50.harvard.edu/x/" target="_blank">Harvard CS50x 2024</a></li>
