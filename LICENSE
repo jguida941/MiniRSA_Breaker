@@ -1,27 +1,16 @@
-License
+Evaluation License — All Rights Reserved
 
+Copyright (c) 2025 Justin Guida (@jguida941). All rights reserved.
 
-Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)  
-This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.  
-To view the full license, visit: https://creativecommons.org/licenses/by-nc/4.0/
+Permission granted: You may clone this repository and run it locally for personal use or hiring evaluation only.
 
-You are free to:
+Not permitted without written permission:
+	•	Redistribution (public or private), hosting, or packaging of the code or binaries
+	•	Sublicensing or derivative distribution
+	•	Any commercial use
 
-• Share — copy and redistribute the material in any medium or format  
-• Adapt — remix, transform, and build upon the material
+Third-party notice (Qt): This app uses PyQt6 (GPLv3). Local evaluation is fine. Do not redistribute this app or any built binaries unless you comply with the GPL or possess a Qt commercial license. Nothing here grants rights in PyQt6/Qt.
 
-Under the following terms:
+No warranty: Provided “as is,” without warranties or liability.
 
-• Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.  
-  Credit must include:  
-  • Name: Justin Guida  
-  • Year: 2025  
-  • GitHub: https://github.com/jguida941  
-
-• NonCommercial — You may not use the material for commercial purposes without explicit written permission from the author.
-
-Additional Terms:
-
-• You may not sell, rebrand, or redistribute this work for profit.  
-• Educational institutions and students may freely use, adapt, and build upon this work for non-commercial academic use, including course materials and presentations.  
-• Derivative works must also credit the original author clearly.
+For exceptions or a commercial/evaluation agreement signed by me, contact: justin.guida@snhu.edu
