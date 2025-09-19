@@ -162,34 +162,16 @@ while you’re just trying to run a prime test.</p>
 
 <hr>
 
-<h3> License: <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></h3>
+## License
 
-<p>© 2025 <b>Justin Guida</b><br>
-This project is licensed under the <b>Creative Commons Attribution-NonCommercial 4.0 International License</b>.</p>
+**Evaluation only — all rights reserved.**
 
-<h4>You May:</h4>
-<ul>
-  <li><b> Share</b> — Copy, distribute, and share the code</li>
-  <li><b> Adapt</b> — Remix, transform, or build upon it for personal or academic purposes</li>
-</ul>
+You may **clone and run locally** for personal or hiring evaluation.  
+You may **not** redistribute, sublicense, or use this work commercially without my written permission.
 
-<h4> You May Not:</h4>
-<ul>
-  <li> Use this work for commercial purposes</li>
-  <li> Sell, rebrand, or repackage this project for profit</li>
-</ul>
+See the [LICENSE](LICENSE) file for the exact terms.
 
-<h4> You Must:</h4>
-<ul>
-  <li>Credit the original author clearly:</li>
-  <ul>
-    <li><b>Name:</b> Justin Guida</li>
-    <li><b>Year:</b> 2025</li>
-    <li><b>GitHub:</b> <a href="https://github.com/jguida941" target="_blank">https://github.com/jguida941</a></li>
-  </ul>
-</ul>
-
-<hr>
+**Qt note:** This app uses **PyQt6 (GPLv3)**. Do **not** redistribute the app unless you comply with GPLv3 or have a Qt commercial license.
 
  <h3> Educational Use Terms</h3>
 <ul>
@@ -205,8 +187,3 @@ This project is licensed under the <b>Creative Commons Attribution-NonCommercial
   <li><a href="https://en.wikipedia.org/wiki/Cryptography" target="_blank">Cryptographic Methods</a></li>
 </ul>
 
-<p style="font-size: 0.9em;">
- <i>Attribution link:</i> 
-<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
-https://creativecommons.org/licenses/by-nc/4.0/</a>
-</p> 
