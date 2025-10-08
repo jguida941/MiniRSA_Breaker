@@ -22,6 +22,7 @@ dev = [
   "mypy>=1.11.2",
   "mutmut>=2.4.4",
   "pip-audit>=2.7.3",
+  "pre-commit>=3.8.0",
   "pytest>=8.3.2",
   "pytest-benchmark>=4.0.0",
   "pytest-cov>=5.0.0",
@@ -30,6 +31,7 @@ dev = [
   "pytest-xdist>=3.6.1",
   "pytest-icdiff>=0.8",
   "ruff>=0.6.9",
+  "nox>=2024.4.15",
   "types-setuptools",
   "pytest-approvaltests>=0.1.0"
 ]
@@ -96,6 +98,9 @@ deadline = 500
 derandomize = true
 print_blob = true
 stateful_step_count = 50
+
+[tool.bandit]
+skips = ["B101"]
 
 [tool.mutmut]
 paths_to_mutate = [

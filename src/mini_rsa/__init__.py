@@ -1,29 +1,43 @@
-"""MiniRSA core utilities exposed for testing and automation pipelines."""
+"""MiniRSA public API."""
 
-from .core import (
-    AllowedSymbol,
-    EncryptionResult,
-    decrypt_numbers,
-    decrypt_text_blocks,
-    encrypt_text,
-    gcd,
-    is_prime,
+from .codec import (
+    PUNCTUATION_MAP,
+    REVERSE_PUNCTUATION_MAP,
     map_character,
     map_number,
+    tokenize_cipher_text,
+)
+from .core import (
+    EncryptionResult,
+    calculate_entropy,
+    decrypt_numbers,
+    decrypt_text_blocks,
+    encrypt_block,
+    encrypt_text,
+    ensure_coprime,
+    gcd,
+    generate_secure_primes,
+    is_prime,
     mod_inverse,
     validate_prime_pair,
 )
 
 __all__ = [
-    "AllowedSymbol",
     "EncryptionResult",
+    "PUNCTUATION_MAP",
+    "REVERSE_PUNCTUATION_MAP",
+    "calculate_entropy",
     "decrypt_numbers",
     "decrypt_text_blocks",
+    "encrypt_block",
     "encrypt_text",
+    "ensure_coprime",
     "gcd",
+    "generate_secure_primes",
     "is_prime",
     "map_character",
     "map_number",
     "mod_inverse",
+    "tokenize_cipher_text",
     "validate_prime_pair",
 ]

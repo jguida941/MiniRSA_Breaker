@@ -43,3 +43,12 @@ htmlcov/
 .eggs/
 *.sqlite3
 *.db
+
+# Hypothesis artifacts
+.hypothesis/
+mutants/.hypothesis/
+mutants/mutmut.log
+mutants/mutmut.results
+mutants/mutmut-stats.json
+codex_logs/
+codex-report.json

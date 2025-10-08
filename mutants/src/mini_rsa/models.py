@@ -1,46 +1,7 @@
-"""MiniRSA public API."""
+from __future__ import annotations
 
-from .codec import (
-    PUNCTUATION_MAP,
-    REVERSE_PUNCTUATION_MAP,
-    map_character,
-    map_number,
-    tokenize_cipher_text,
-)
-from .core import (
-    EncryptionResult,
-    calculate_entropy,
-    decrypt_numbers,
-    decrypt_text_blocks,
-    encrypt_block,
-    encrypt_text,
-    ensure_coprime,
-    gcd,
-    generate_secure_primes,
-    is_prime,
-    mod_inverse,
-    validate_prime_pair,
-)
-
-__all__ = [
-    "EncryptionResult",
-    "PUNCTUATION_MAP",
-    "REVERSE_PUNCTUATION_MAP",
-    "calculate_entropy",
-    "decrypt_numbers",
-    "decrypt_text_blocks",
-    "encrypt_block",
-    "encrypt_text",
-    "ensure_coprime",
-    "gcd",
-    "generate_secure_primes",
-    "is_prime",
-    "map_character",
-    "map_number",
-    "mod_inverse",
-    "tokenize_cipher_text",
-    "validate_prime_pair",
-]
+from dataclasses import dataclass
+from typing import List
 from inspect import signature as _mutmut_signature
 from typing import Annotated
 from typing import Callable
@@ -73,3 +34,11 @@ def _mutmut_trampoline(orig, mutants, call_args, call_kwargs, self_arg = None):
     else:
         result = mutants[mutant_name](*call_args, **call_kwargs)
     return result
+
+
+@dataclass(slots=True)
+class EncryptionResult:
+    cipher_blocks: List[int]
+    plain_blocks: List[int]
+    skipped_characters: List[str]
+    trace: List[str]

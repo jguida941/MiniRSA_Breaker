@@ -3,7 +3,7 @@ import json
 import os
 # pylint: disable=W0612,W0613,W0621,R0914,C0103,C0801
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
-                             QHBoxLayout, QLabel, QLineEdit, QPushButton,
+                             QHBoxLayout, QLabel, QPushButton,
                              QTextEdit, QGroupBox, QGridLayout, QSpinBox,
                              QTabWidget, QComboBox, QCheckBox, QMessageBox,
                              QSplitter, QFrame, QFileDialog, QProgressBar,
@@ -237,13 +237,20 @@ class RSAWorker(QThread):
         plain_formatted = ' '.join(f"{num:02d}" for num in original_numbers)
         encrypted_formatted = ' '.join(f"{num:02d}" for num in result)
         output = f"Original numbers: {plain_formatted}\nEncrypted: {encrypted_formatted}"
-        if skipped_chars and not include_punctuation:
+        if skipped_chars:
             unique_skipped = ''.join(sorted(set(skipped_chars)))
-            output += (
-                "\n\n[Warning] The following character(s) were skipped due to punctuation settings: "
-                f"{unique_skipped}\n"
-                "To include punctuation, check the 'Include punctuation' box."
-            )
+            if include_punctuation:
+                output += (
+                    "\n\n[Warning] The following character(s) could not be encrypted because they "
+                    f"are not supported by the current mapping: {unique_skipped}\n"
+                    "Supported punctuation: . , ! ? ;"
+                )
+            else:
+                output += (
+                    "\n\n[Warning] The following character(s) were skipped due to punctuation settings: "
+                    f"{unique_skipped}\n"
+                    "To include punctuation, check the 'Include punctuation' box."
+                )
         return output
 
     def decrypt_message(self):
@@ -271,18 +278,32 @@ class RSAWorker(QThread):
             self.progress.emit(f"Decrypting: {enc_num} → {dec_num}")
             self.progress_value.emit(int((i + 1) / total_steps * 100))
 
-        # Convert back to text
+        # Convert back to text (auto-detect punctuation even if checkbox was missed)
+        punctuation_map = {27: '.', 28: ',', 29: '!', 30: '?', 31: ';'}
+        detected_punctuation = any(27 <= num <= 31 for num in decrypted)
+        allow_punctuation = include_punctuation or detected_punctuation
+
         message = ""
         for num in decrypted:
             if 1 <= num <= 26:
                 message += chr(num - 1 + ord('A'))
             elif num == 32:
                 message += ' '
-            elif include_punctuation and 27 <= num <= 31:
-                punctuation_map = {27: '.', 28: ',', 29: '!', 30: '?', 31: ';'}
+            elif allow_punctuation and 27 <= num <= 31:
                 message += punctuation_map.get(num, '')
 
-        return f"Decrypted numbers: {' '.join(f'{num:02d}' for num in decrypted)}\nMessage: {message}"
+        output_lines = [
+            f"Decrypted numbers: {' '.join(f'{num:02d}' for num in decrypted)}",
+            f"Message: {message}"
+        ]
+
+        if detected_punctuation and not include_punctuation:
+            output_lines.append(
+                "\n[Info] Punctuation detected automatically. Check 'Message includes punctuation' "
+                "next time to skip this message."
+            )
+
+        return "\n".join(output_lines)
 
 #Class that define the animated progress bar
 class AnimatedProgressBar(QProgressBar):
@@ -674,14 +695,6 @@ class RSAMainWindow(QMainWindow):
         self.decrypt_input.setMaximumHeight(100)
         input_layout.addWidget(self.decrypt_input)
 
-        # Add external input for custom-pasted encrypted messages
-        self.external_input = QLineEdit()
-        self.external_input.setPlaceholderText("Paste encrypted numbers (e.g. 27 03 16 ...)")
-        self.decrypt_external_btn = QPushButton("Decrypt External Message")
-        self.decrypt_external_btn.clicked.connect(self.handle_decrypt_external)
-        input_layout.addWidget(self.external_input)
-        input_layout.addWidget(self.decrypt_external_btn)
-
         options_layout = QHBoxLayout()
         self.include_punct_decrypt = QCheckBox("Message includes punctuation")
         self.include_punct_decrypt.setToolTip("Check if message contains punctuation")
@@ -714,16 +727,6 @@ class RSAMainWindow(QMainWindow):
 
         output_group.setLayout(output_layout)
         layout.addWidget(output_group)
-
-    def handle_decrypt_external(self):
-        cipher_text = self.external_input.text()
-        try:
-            d = int(self.d_label.text())
-            n = int(self.n_label.text())
-            result = decrypt_custom_message(cipher_text, d, n)
-            QMessageBox.information(self, "Decrypted Output", f"Decrypted Message:\n{result}")
-        except Exception as e:
-            QMessageBox.critical(self, "Error", str(e))
 
     def create_example_tab(self, parent):
         layout = QVBoxLayout(parent)

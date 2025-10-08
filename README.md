@@ -21,6 +21,8 @@ Build understanding through math, logic, and real cryptographic theory. **All st
 
 Whether you're a **teacher**, a **CS student**,or just **someone fascinated by how passwords work**, this tool was built for you.
 
+📚 New to the workflow? See [CONTRIBUTING.md](CONTRIBUTING.md) and the [AI-Assisted Quality Playbook](docs/ai-assisted-quality-playbook.md) before landing changes.
+
 ## Features
 
 **RSA Key Generation**  
@@ -106,19 +108,23 @@ Run the full local quality stack (matches CI gates):
 
 ```bash
 pip install -e .[dev,gui]
-pytest
-# Strict coverage gate
-pytest --cov=mini_rsa --cov-report=xml --cov-fail-under=90
+pip install pre-commit && pre-commit install
+make quality
 ```
 
-Targeted checks are also available:
+Targeted checks (see `docs/ai-assisted-quality-playbook.md` for the full workflow):
 
-- `ruff check .` – static analysis & linting
-- `mypy src/mini_rsa` – strict type checking of the core math engine
-- `pytest -m "gui"` – headless Qt smoke tests (use `xvfb-run` on Linux)
-- `mutmut run --paths-to-mutate src/mini_rsa` – mutation testing
-- `bandit -q -r src/mini_rsa rsa.py` – security linting
-- `pip-audit -r requirements.txt` – dependency vulnerability scan
+- For Codex or fully automated runs without Docker, follow `docs/codex-integration.md` or simply execute `make codex-pipeline` (JSON summary is written to `codex-report.json`).
+- `ruff check .` – static analysis that catches unused imports, undefined names, and formatting drift before runtime.
+- `mypy src/mini_rsa` – strict typing on the math engine to surface AI-generated signature mismatches or accidental `Any`.
+- `pytest -m "gui"` – headless Qt smoke tests (use `xvfb-run` on Linux) to verify signal wiring and background threads.
+- `pytest tests/unit/test_imports.py` – import smoke to expose circular imports or optional dependency slips.
+- `mutmut run --paths-to-mutate src/mini_rsa` – mutation testing to prove the unit/property tests kill realistic math regressions.
+- `bandit -q -r src/mini_rsa rsa.py` – security linting for unsafe randomness, subprocess usage, or crypto misconfigurations.
+- `pip-audit -r requirements.txt` – dependency vulnerability scan so nightly AI updates do not introduce known CVEs.
+- `make mutation MUTATE_PATHS=src/mini_rsa/core.py` – quick scoped mutation sweep before merging AI-generated core edits.
+- `make mutation-clean` – clear cached Hypothesis/Mutmut artefacts if diffs get noisy.
+- `pre-commit run --all-files` – mirror the lint/type/security checks that run automatically on every commit.
 
 ## License
 
