@@ -1,0 +1,18 @@
+From HEAD Mon Sep 17 00:00:00 2001
+From: Hypothesis 6.140.3 <no-reply@hypothesis.works>
+Date: Wed, 08 Oct 2025 11:44:03
+Subject: [PATCH] Hypothesis: add explicit examples
+
+---
+--- ./tests/property/test_encrypt_decrypt_property.py
++++ ./tests/property/test_encrypt_decrypt_property.py
+@@ -82,6 +82,9 @@
+         max_size=48,
+     ),
+ )
++@example(prime_pair=(3, 11), message=";").via(  # or any other generated value
++    "discovered failure"
++)
+ def test_core_matches_qt_calculator(prime_pair, message: str) -> None:
+     p, q = prime_pair
+     n = p * q

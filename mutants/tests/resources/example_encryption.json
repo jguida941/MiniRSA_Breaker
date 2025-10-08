@@ -1,0 +1,8 @@
+{
+  "p": 3,
+  "q": 11,
+  "e": 3,
+  "plaintext": "A CAB",
+  "cipher_numbers": [1, 32, 27, 1, 8],
+  "include_punctuation": true
+}
