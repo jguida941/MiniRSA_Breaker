@@ -1,14 +1,17 @@
-# 🔐 MiniRSA_Breaker
+# 🔐 MiniRSA Breaker
 
 **Category:** Cryptography / Educational Visualization  
-**Tech Stack:** Python, PyQt6  
-**Author:** [Justin Guida](https://github.com/jguida941)   
+**Tech Stack:** Python · PyQt6  
+**Author:** [Justin Guida](https://github.com/jguida941)  
 **White Hat Verified 🧢**
 
-**This project enables interactive RSA encryption and decryption** with full step-by-step visual feedback.
+## Overview
+
+**MiniRSA Breaker** is an interactive desktop application that demonstrates how **RSA encryption and decryption** work through clear, visual, and mathematical explanations.  
+It provides **step-by-step feedback** for every stage of the process—prime generation, key computation, and ciphertext decoding—allowing learners to see how real cryptographic logic operates.
+
 
 **Build understanding** through math, logic, and real cryptographic theory. **All students and educators welcome.**
-
 
 
 ## Use it to:
