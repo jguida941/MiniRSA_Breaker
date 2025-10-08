@@ -8,10 +8,9 @@
 ## Overview
 
 **MiniRSA Breaker** is an interactive desktop application that demonstrates how **RSA encryption and decryption** work through clear, visual, and mathematical explanations.  
-It provides **step-by-step feedback** for every stage of the process—prime generation, key computation, and ciphertext decoding—allowing learners to see how real cryptographic logic operates.
+It provides **step-by-step feedback** for every stage of the process, prime generation, key computation, and ciphertext decoding, allowing learners to see how real cryptographic logic operates. 
 
-
-**Build understanding** through math, logic, and real cryptographic theory. **All students and educators welcome.**
+Build understanding through math, logic, and real cryptographic theory. **All students and educators welcome.**
 
 
 ## Use it to:
@@ -20,7 +19,7 @@ It provides **step-by-step feedback** for every stage of the process—prime gen
 -  **Break down** modular exponentiation  
 -  **Compare** weak vs. strong keys  
 
-Whether you're a **teacher**, a **CS student**,or just **someone fascinated by how passwords work**, **this tool was built for you.**
+Whether you're a **teacher**, a **CS student**,or just **someone fascinated by how passwords work**, this tool was built for you.
 
 ## Features
 
@@ -51,7 +50,7 @@ Toggle debug mode to show raw values, intermediate results, and contextual expla
 ## Screenshots
 
 ### Main Interface RSA Setup: 
-**Define primes, generate public/private keys, and view entropy ratings in real time.**
+Define primes, generate public/private keys, and view entropy ratings in real time.
 
 <img width="1195" alt="Screenshot 2025-06-27 at 10 18 09 PM" src="https://github.com/user-attachments/assets/b5174655-6163-4e40-856f-27b8a8a2759c" />
 
@@ -60,7 +59,7 @@ Toggle debug mode to show raw values, intermediate results, and contextual expla
 
 
 ### Encryption Panel: 
-**Watch your message get encrypted character by character using modular exponentiation.**
+Watch your message get encrypted character by character using modular exponentiation.
 
 <img width="1197" alt="Screenshot 2025-06-27 at 10 18 49 PM" src="https://github.com/user-attachments/assets/5da211a7-97e6-44e0-899d-0e331e3bacbf" />
 <br>
@@ -68,16 +67,16 @@ Toggle debug mode to show raw values, intermediate results, and contextual expla
 
 
 ### Decryption Panel: 
-**Reverse the cipher text and view RSA logic in reverse using your private key.**
+Reverse the cipher text and view RSA logic in reverse using your private key
 
 <img width="1198" height="908" alt="Screenshot 2025-10-08 at 8 39 51 AM" src="https://github.com/user-attachments/assets/4038e8ae-68a6-4a9d-8fc9-a6ef96e456c6" />
 
 
 <br>
 
-### How to Run:
+### How to Run:.
 
-### Follow these steps to launch **MiniRSA_Breaker** locally:
+#### Follow these steps to launch **MiniRSA_Breaker** locally:
 
  **1. Clone the Repository**
 ```bash
@@ -123,7 +122,7 @@ Targeted checks are also available:
 
 ## License
 
-**Evaluation only — all rights reserved.**
+**Evaluation only - all rights reserved.**
 
 You may **clone and run locally** for personal or hiring evaluation.  
 You may **not** redistribute, sublicense, or use this work commercially without my written permission.
