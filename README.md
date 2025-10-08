@@ -67,7 +67,8 @@ Toggle debug mode to show raw values, intermediate results, and contextual expla
 ### Decryption Panel: 
 **Reverse the cipher text and view RSA logic in reverse using your private key.**
 
-<img width="1194" alt="Screenshot 2025-06-27 at 10 19 22 PM" src="https://github.com/user-attachments/assets/40b65622-5c40-4cc8-9fd7-bbe587868c8b" />
+<img width="1198" height="908" alt="Screenshot 2025-10-08 at 8 39 51 AM" src="https://github.com/user-attachments/assets/4038e8ae-68a6-4a9d-8fc9-a6ef96e456c6" />
+
 
 <br>
 
