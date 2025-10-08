@@ -511,9 +511,7 @@ def x_encrypt_text__mutmut_orig(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -544,9 +542,7 @@ def x_encrypt_text__mutmut_1(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -577,9 +573,7 @@ def x_encrypt_text__mutmut_2(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -610,9 +604,7 @@ def x_encrypt_text__mutmut_3(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -643,9 +635,7 @@ def x_encrypt_text__mutmut_4(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -676,9 +666,7 @@ def x_encrypt_text__mutmut_5(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -709,9 +697,7 @@ def x_encrypt_text__mutmut_6(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -742,9 +728,7 @@ def x_encrypt_text__mutmut_7(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -775,9 +759,7 @@ def x_encrypt_text__mutmut_8(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -808,9 +790,7 @@ def x_encrypt_text__mutmut_9(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -841,9 +821,7 @@ def x_encrypt_text__mutmut_10(
         if accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -874,9 +852,7 @@ def x_encrypt_text__mutmut_11(
         if not accepted:
             skipped.append(None)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -907,9 +883,7 @@ def x_encrypt_text__mutmut_12(
         if not accepted:
             skipped.append(character)
             break
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -940,9 +914,7 @@ def x_encrypt_text__mutmut_13(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is not None:
-            skipped.append(character)
-            continue
+        assert mapped is None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -973,11 +945,9 @@ def x_encrypt_text__mutmut_14(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(None)
-            continue
+        assert mapped is not None
 
-        _validate_block(mapped, n, "message_block")
+        _validate_block(None, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
@@ -1006,11 +976,9 @@ def x_encrypt_text__mutmut_15(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            break
+        assert mapped is not None
 
-        _validate_block(mapped, n, "message_block")
+        _validate_block(mapped, None, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
@@ -1039,11 +1007,9 @@ def x_encrypt_text__mutmut_16(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
-        _validate_block(None, n, "message_block")
+        _validate_block(mapped, n, None)
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
@@ -1072,11 +1038,9 @@ def x_encrypt_text__mutmut_17(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
-        _validate_block(mapped, None, "message_block")
+        _validate_block(n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
@@ -1105,11 +1069,9 @@ def x_encrypt_text__mutmut_18(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
-        _validate_block(mapped, n, None)
+        _validate_block(mapped, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
@@ -1138,11 +1100,9 @@ def x_encrypt_text__mutmut_19(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
-        _validate_block(n, "message_block")
+        _validate_block(mapped, n, )
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
@@ -1171,11 +1131,9 @@ def x_encrypt_text__mutmut_20(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
-        _validate_block(mapped, "message_block")
+        _validate_block(mapped, n, "XXmessage_blockXX")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
@@ -1204,11 +1162,9 @@ def x_encrypt_text__mutmut_21(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
-        _validate_block(mapped, n, )
+        _validate_block(mapped, n, "MESSAGE_BLOCK")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
@@ -1237,12 +1193,10 @@ def x_encrypt_text__mutmut_22(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
-        _validate_block(mapped, n, "XXmessage_blockXX")
-        encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
+        _validate_block(mapped, n, "message_block")
+        encrypted = None
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1270,12 +1224,10 @@ def x_encrypt_text__mutmut_23(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
-        _validate_block(mapped, n, "MESSAGE_BLOCK")
-        encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
+        _validate_block(mapped, n, "message_block")
+        encrypted = encrypt_block_fn(None, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1303,12 +1255,10 @@ def x_encrypt_text__mutmut_24(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = None
+        encrypted = encrypt_block_fn(mapped, None, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1336,12 +1286,10 @@ def x_encrypt_text__mutmut_25(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(None, e, n, use_large_numbers)
+        encrypted = encrypt_block_fn(mapped, e, None, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1369,12 +1317,10 @@ def x_encrypt_text__mutmut_26(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(mapped, None, n, use_large_numbers)
+        encrypted = encrypt_block_fn(mapped, e, n, None)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1402,12 +1348,10 @@ def x_encrypt_text__mutmut_27(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(mapped, e, None, use_large_numbers)
+        encrypted = encrypt_block_fn(e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1435,12 +1379,10 @@ def x_encrypt_text__mutmut_28(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(mapped, e, n, None)
+        encrypted = encrypt_block_fn(mapped, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1468,12 +1410,10 @@ def x_encrypt_text__mutmut_29(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(e, n, use_large_numbers)
+        encrypted = encrypt_block_fn(mapped, e, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1501,12 +1441,10 @@ def x_encrypt_text__mutmut_30(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(mapped, n, use_large_numbers)
+        encrypted = encrypt_block_fn(mapped, e, n, )
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
@@ -1534,13 +1472,11 @@ def x_encrypt_text__mutmut_31(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(mapped, e, use_large_numbers)
-        cipher_blocks.append(encrypted)
+        encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
+        cipher_blocks.append(None)
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
 
@@ -1567,14 +1503,12 @@ def x_encrypt_text__mutmut_32(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(mapped, e, n, )
+        encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
-        plain_blocks.append(mapped)
+        plain_blocks.append(None)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
 
     return EncryptionResult(cipher_blocks, plain_blocks, skipped, trace)
@@ -1600,15 +1534,13 @@ def x_encrypt_text__mutmut_33(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
-        cipher_blocks.append(None)
+        cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
-        trace.append(f"Encrypting: {mapped} → {encrypted}")
+        trace.append(None)
 
     return EncryptionResult(cipher_blocks, plain_blocks, skipped, trace)
 
@@ -1633,17 +1565,15 @@ def x_encrypt_text__mutmut_34(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
-        plain_blocks.append(None)
+        plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
 
-    return EncryptionResult(cipher_blocks, plain_blocks, skipped, trace)
+    return EncryptionResult(None, plain_blocks, skipped, trace)
 
 
 def x_encrypt_text__mutmut_35(
@@ -1666,17 +1596,15 @@ def x_encrypt_text__mutmut_35(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
         cipher_blocks.append(encrypted)
         plain_blocks.append(mapped)
-        trace.append(None)
+        trace.append(f"Encrypting: {mapped} → {encrypted}")
 
-    return EncryptionResult(cipher_blocks, plain_blocks, skipped, trace)
+    return EncryptionResult(cipher_blocks, None, skipped, trace)
 
 
 def x_encrypt_text__mutmut_36(
@@ -1699,9 +1627,7 @@ def x_encrypt_text__mutmut_36(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -1709,7 +1635,7 @@ def x_encrypt_text__mutmut_36(
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
 
-    return EncryptionResult(None, plain_blocks, skipped, trace)
+    return EncryptionResult(cipher_blocks, plain_blocks, None, trace)
 
 
 def x_encrypt_text__mutmut_37(
@@ -1732,9 +1658,7 @@ def x_encrypt_text__mutmut_37(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -1742,7 +1666,7 @@ def x_encrypt_text__mutmut_37(
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
 
-    return EncryptionResult(cipher_blocks, None, skipped, trace)
+    return EncryptionResult(cipher_blocks, plain_blocks, skipped, None)
 
 
 def x_encrypt_text__mutmut_38(
@@ -1765,9 +1689,7 @@ def x_encrypt_text__mutmut_38(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -1775,7 +1697,7 @@ def x_encrypt_text__mutmut_38(
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
 
-    return EncryptionResult(cipher_blocks, plain_blocks, None, trace)
+    return EncryptionResult(plain_blocks, skipped, trace)
 
 
 def x_encrypt_text__mutmut_39(
@@ -1798,9 +1720,7 @@ def x_encrypt_text__mutmut_39(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -1808,7 +1728,7 @@ def x_encrypt_text__mutmut_39(
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
 
-    return EncryptionResult(cipher_blocks, plain_blocks, skipped, None)
+    return EncryptionResult(cipher_blocks, skipped, trace)
 
 
 def x_encrypt_text__mutmut_40(
@@ -1831,9 +1751,7 @@ def x_encrypt_text__mutmut_40(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -1841,7 +1759,7 @@ def x_encrypt_text__mutmut_40(
         plain_blocks.append(mapped)
         trace.append(f"Encrypting: {mapped} → {encrypted}")
 
-    return EncryptionResult(plain_blocks, skipped, trace)
+    return EncryptionResult(cipher_blocks, plain_blocks, trace)
 
 
 def x_encrypt_text__mutmut_41(
@@ -1864,75 +1782,7 @@ def x_encrypt_text__mutmut_41(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
-
-        _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
-        cipher_blocks.append(encrypted)
-        plain_blocks.append(mapped)
-        trace.append(f"Encrypting: {mapped} → {encrypted}")
-
-    return EncryptionResult(cipher_blocks, skipped, trace)
-
-
-def x_encrypt_text__mutmut_42(
-    text: str,
-    encrypt_block_fn: PowFunction,
-    include_punctuation: bool,
-    use_large_numbers: bool,
-    n: int,
-    e: int,
-) -> EncryptionResult:
-    from .core import _validate_block  # local import to avoid cycle
-
-    cipher_blocks: List[int] = []
-    plain_blocks: List[int] = []
-    skipped: List[str] = []
-    trace: List[str] = []
-
-    for character in text:
-        accepted, mapped = map_character(character, include_punctuation)
-        if not accepted:
-            skipped.append(character)
-            continue
-        if mapped is None:
-            skipped.append(character)
-            continue
-
-        _validate_block(mapped, n, "message_block")
-        encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
-        cipher_blocks.append(encrypted)
-        plain_blocks.append(mapped)
-        trace.append(f"Encrypting: {mapped} → {encrypted}")
-
-    return EncryptionResult(cipher_blocks, plain_blocks, trace)
-
-
-def x_encrypt_text__mutmut_43(
-    text: str,
-    encrypt_block_fn: PowFunction,
-    include_punctuation: bool,
-    use_large_numbers: bool,
-    n: int,
-    e: int,
-) -> EncryptionResult:
-    from .core import _validate_block  # local import to avoid cycle
-
-    cipher_blocks: List[int] = []
-    plain_blocks: List[int] = []
-    skipped: List[str] = []
-    trace: List[str] = []
-
-    for character in text:
-        accepted, mapped = map_character(character, include_punctuation)
-        if not accepted:
-            skipped.append(character)
-            continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)
@@ -1983,9 +1833,7 @@ x_encrypt_text__mutmut_mutants : ClassVar[MutantDict] = {
     'x_encrypt_text__mutmut_38': x_encrypt_text__mutmut_38, 
     'x_encrypt_text__mutmut_39': x_encrypt_text__mutmut_39, 
     'x_encrypt_text__mutmut_40': x_encrypt_text__mutmut_40, 
-    'x_encrypt_text__mutmut_41': x_encrypt_text__mutmut_41, 
-    'x_encrypt_text__mutmut_42': x_encrypt_text__mutmut_42, 
-    'x_encrypt_text__mutmut_43': x_encrypt_text__mutmut_43
+    'x_encrypt_text__mutmut_41': x_encrypt_text__mutmut_41
 }
 
 def encrypt_text(*args, **kwargs):

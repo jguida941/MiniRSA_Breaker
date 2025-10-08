@@ -18,7 +18,9 @@ def lint_session(session: nox.Session) -> None:
 @nox.session(name="tests-3.11", python="3.11")
 def tests_311_session(session: nox.Session) -> None:
     session.install("-e", ".[dev]")
-    session.run("pytest", "-m", "not gui", "--randomly-seed=1", "--cov=mini_rsa", "--cov-report=xml")
+    session.run(
+        "pytest", "-m", "not gui", "--randomly-seed=1", "--cov=mini_rsa", "--cov-report=xml"
+    )
 
 
 @nox.session(name="tests-3.10", python="3.10")

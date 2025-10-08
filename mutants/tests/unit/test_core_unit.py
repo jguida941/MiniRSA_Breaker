@@ -481,7 +481,9 @@ def test_decrypt_text_blocks_passes_flags(monkeypatch: pytest.MonkeyPatch) -> No
         return numbers
 
     monkeypatch.setattr(core, "decrypt_numbers", fake_decrypt_numbers)
-    result = core.decrypt_text_blocks([1, 32], d=7, n=33, include_punctuation=False, use_large_numbers=True)
+    result = core.decrypt_text_blocks(
+        [1, 32], d=7, n=33, include_punctuation=False, use_large_numbers=True
+    )
     assert result == "A "
     assert captured["use_large_numbers"] is True
 
@@ -564,10 +566,14 @@ def test_encrypt_with_reference_matches_encrypt_text() -> None:
 def test_encrypt_with_reference_forces_punctuation(monkeypatch: pytest.MonkeyPatch) -> None:
     calls = {}
 
-    def fake_encrypt_text(text: str, e: int, n: int, include_punctuation: bool, use_large_numbers: bool) -> EncryptionResult:
+    def fake_encrypt_text(
+        text: str, e: int, n: int, include_punctuation: bool, use_large_numbers: bool
+    ) -> EncryptionResult:
         calls["include_punctuation"] = include_punctuation
         calls["use_large_numbers"] = use_large_numbers
-        return EncryptionResult(cipher_blocks=[1], plain_blocks=[1], skipped_characters=[], trace=[])
+        return EncryptionResult(
+            cipher_blocks=[1], plain_blocks=[1], skipped_characters=[], trace=[]
+        )
 
     monkeypatch.setattr(core, "encrypt_text", fake_encrypt_text)
     encrypt_with_reference("A", 3, 33)
@@ -668,26 +674,30 @@ def test_generate_secure_primes_crypto_path(monkeypatch: pytest.MonkeyPatch) -> 
 
 
 def test_generate_secure_primes_crypto_bits_passed(monkeypatch: pytest.MonkeyPatch) -> None:
-    bits_recorded = []
-
     class Recorder:
+        def __init__(self):
+            self.calls = 0
+
         def getPrime(self, bits: int) -> int:  # noqa: N802
-            bits_recorded.append(bits)
-            return 101 if not bits_recorded or bits_recorded.count(bits) == 1 else 103
+            assert bits == 32
+            self.calls += 1
+            return 101 if self.calls == 1 else 103
 
     monkeypatch.setattr(core, "CRYPTO_AVAILABLE", True)
     monkeypatch.setattr(core, "number", Recorder())
-    result = core.generate_secure_primes(32)
-    assert result[0] != result[1]
-    assert bits_recorded == [32, 32]
+    p, q = core.generate_secure_primes(32)
+    assert p != q
 
 
 def test_generate_secure_primes_crypto_path_retries(monkeypatch: pytest.MonkeyPatch) -> None:
+    bits_seen = []
+
     class DummyNumberRepeat:
         def __init__(self):
             self.calls = 0
 
         def getPrime(self, bits: int) -> int:  # noqa: N802
+            bits_seen.append(bits)
             self.calls += 1
             if self.calls < 3:
                 return 101
@@ -699,6 +709,7 @@ def test_generate_secure_primes_crypto_path_retries(monkeypatch: pytest.MonkeyPa
     p, q = core.generate_secure_primes(16)
     assert p == 101 and q == 103
     assert dummy.calls == 3
+    assert bits_seen == [16, 16, 16]
 
 
 def test_generate_secure_primes_handles_missing_number(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -714,7 +725,9 @@ def test_generate_secure_primes_handles_missing_number(monkeypatch: pytest.Monke
     assert core.is_prime(p) and core.is_prime(q)
 
 
-def test_generate_secure_primes_fallback_list_contains_only_primes(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_generate_secure_primes_fallback_list_contains_only_primes(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
     monkeypatch.setattr(core, "CRYPTO_AVAILABLE", False)
     monkeypatch.setattr(core, "number", None)
 

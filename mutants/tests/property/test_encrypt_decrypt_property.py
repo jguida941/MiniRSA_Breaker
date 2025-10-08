@@ -30,7 +30,9 @@ def random_prime_pair():
     ),
     include_punctuation=st.booleans(),
 )
-def test_round_trip_with_allowed_symbols(prime_pair, message: str, include_punctuation: bool) -> None:
+def test_round_trip_with_allowed_symbols(
+    prime_pair, message: str, include_punctuation: bool
+) -> None:
     p, q = prime_pair
     n = p * q
     e = 3

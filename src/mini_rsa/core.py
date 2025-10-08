@@ -65,10 +65,7 @@ def mod_inverse(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def is_prime(n: int) -> bool:
@@ -117,7 +114,9 @@ def calculate_entropy(n: int) -> float:
 def validate_entropy_bounds(n: int, expected_min_bits: float) -> None:
     entropy = calculate_entropy(n)
     if entropy < expected_min_bits:
-        raise ValueError(f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}")
+        raise ValueError(
+            f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}"
+        )
 
 
 def _pow_mod(base: int, exponent: int, modulus: int, use_large_numbers: bool) -> int:

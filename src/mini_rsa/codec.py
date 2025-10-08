@@ -65,9 +65,7 @@ def encrypt_text(
         if not accepted:
             skipped.append(character)
             continue
-        if mapped is None:
-            skipped.append(character)
-            continue
+        assert mapped is not None
 
         _validate_block(mapped, n, "message_block")
         encrypted = encrypt_block_fn(mapped, e, n, use_large_numbers)

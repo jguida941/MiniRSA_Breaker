@@ -44,7 +44,9 @@ class StageResult:
     duration_s: float
 
 
-def run_command(cmd: List[str], *, env: Optional[Dict[str, str]] = None, log_path: Path) -> subprocess.CompletedProcess[str]:
+def run_command(
+    cmd: List[str], *, env: Optional[Dict[str, str]] = None, log_path: Path
+) -> subprocess.CompletedProcess[str]:
     combined_env = os.environ.copy()
     if env:
         combined_env.update(env)

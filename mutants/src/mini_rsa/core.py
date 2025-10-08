@@ -152,10 +152,7 @@ def x_mod_inverse__mutmut_orig(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_1(e: int, phi: int) -> int:
@@ -176,10 +173,7 @@ def x_mod_inverse__mutmut_1(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_2(e: int, phi: int) -> int:
@@ -200,10 +194,7 @@ def x_mod_inverse__mutmut_2(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_3(e: int, phi: int) -> int:
@@ -224,10 +215,7 @@ def x_mod_inverse__mutmut_3(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_4(e: int, phi: int) -> int:
@@ -248,10 +236,7 @@ def x_mod_inverse__mutmut_4(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_5(e: int, phi: int) -> int:
@@ -272,10 +257,7 @@ def x_mod_inverse__mutmut_5(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_6(e: int, phi: int) -> int:
@@ -296,10 +278,7 @@ def x_mod_inverse__mutmut_6(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_7(e: int, phi: int) -> int:
@@ -320,10 +299,7 @@ def x_mod_inverse__mutmut_7(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_8(e: int, phi: int) -> int:
@@ -344,10 +320,7 @@ def x_mod_inverse__mutmut_8(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_9(e: int, phi: int) -> int:
@@ -368,10 +341,7 @@ def x_mod_inverse__mutmut_9(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_10(e: int, phi: int) -> int:
@@ -392,10 +362,7 @@ def x_mod_inverse__mutmut_10(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_11(e: int, phi: int) -> int:
@@ -416,10 +383,7 @@ def x_mod_inverse__mutmut_11(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_12(e: int, phi: int) -> int:
@@ -440,10 +404,7 @@ def x_mod_inverse__mutmut_12(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_13(e: int, phi: int) -> int:
@@ -464,10 +425,7 @@ def x_mod_inverse__mutmut_13(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_14(e: int, phi: int) -> int:
@@ -488,10 +446,7 @@ def x_mod_inverse__mutmut_14(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_15(e: int, phi: int) -> int:
@@ -512,10 +467,7 @@ def x_mod_inverse__mutmut_15(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_16(e: int, phi: int) -> int:
@@ -536,10 +488,7 @@ def x_mod_inverse__mutmut_16(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_17(e: int, phi: int) -> int:
@@ -560,10 +509,7 @@ def x_mod_inverse__mutmut_17(e: int, phi: int) -> int:
     if _gcd(None, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_18(e: int, phi: int) -> int:
@@ -584,10 +530,7 @@ def x_mod_inverse__mutmut_18(e: int, phi: int) -> int:
     if _gcd(e, None) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_19(e: int, phi: int) -> int:
@@ -608,10 +551,7 @@ def x_mod_inverse__mutmut_19(e: int, phi: int) -> int:
     if _gcd(phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_20(e: int, phi: int) -> int:
@@ -632,10 +572,7 @@ def x_mod_inverse__mutmut_20(e: int, phi: int) -> int:
     if _gcd(e, ) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_21(e: int, phi: int) -> int:
@@ -656,10 +593,7 @@ def x_mod_inverse__mutmut_21(e: int, phi: int) -> int:
     if _gcd(e, phi) == 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_22(e: int, phi: int) -> int:
@@ -680,10 +614,7 @@ def x_mod_inverse__mutmut_22(e: int, phi: int) -> int:
     if _gcd(e, phi) != 2:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_23(e: int, phi: int) -> int:
@@ -704,10 +635,7 @@ def x_mod_inverse__mutmut_23(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError(None)
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_24(e: int, phi: int) -> int:
@@ -728,10 +656,7 @@ def x_mod_inverse__mutmut_24(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("XXModular inverse does not existXX")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_25(e: int, phi: int) -> int:
@@ -752,10 +677,7 @@ def x_mod_inverse__mutmut_25(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_26(e: int, phi: int) -> int:
@@ -776,10 +698,7 @@ def x_mod_inverse__mutmut_26(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("MODULAR INVERSE DOES NOT EXIST")
 
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_27(e: int, phi: int) -> int:
@@ -800,10 +719,7 @@ def x_mod_inverse__mutmut_27(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(None, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(None, -1, phi)
 
 
 def x_mod_inverse__mutmut_28(e: int, phi: int) -> int:
@@ -824,10 +740,7 @@ def x_mod_inverse__mutmut_28(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, None, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, None, phi)
 
 
 def x_mod_inverse__mutmut_29(e: int, phi: int) -> int:
@@ -848,10 +761,7 @@ def x_mod_inverse__mutmut_29(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, None)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, None)
 
 
 def x_mod_inverse__mutmut_30(e: int, phi: int) -> int:
@@ -872,10 +782,7 @@ def x_mod_inverse__mutmut_30(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(-1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(-1, phi)
 
 
 def x_mod_inverse__mutmut_31(e: int, phi: int) -> int:
@@ -896,10 +803,7 @@ def x_mod_inverse__mutmut_31(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, phi)
 
 
 def x_mod_inverse__mutmut_32(e: int, phi: int) -> int:
@@ -920,10 +824,7 @@ def x_mod_inverse__mutmut_32(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -1, )
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, -1, )
 
 
 def x_mod_inverse__mutmut_33(e: int, phi: int) -> int:
@@ -944,10 +845,7 @@ def x_mod_inverse__mutmut_33(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e / phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e / phi, -1, phi)
 
 
 def x_mod_inverse__mutmut_34(e: int, phi: int) -> int:
@@ -968,10 +866,7 @@ def x_mod_inverse__mutmut_34(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, +1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
+    return pow(e % phi, +1, phi)
 
 
 def x_mod_inverse__mutmut_35(e: int, phi: int) -> int:
@@ -992,106 +887,7 @@ def x_mod_inverse__mutmut_35(e: int, phi: int) -> int:
     if _gcd(e, phi) != 1:
         raise ValueError("Modular inverse does not exist")
 
-    try:
-        return pow(e % phi, -2, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("Modular inverse does not exist") from exc
-
-
-def x_mod_inverse__mutmut_36(e: int, phi: int) -> int:
-    """Return modular inverse of e mod phi."""
-    if phi <= 0:
-        raise ValueError("phi must be positive")
-
-    if SYMPY_AVAILABLE and sympy_mod_inverse is not None:
-        try:
-            return int(sympy_mod_inverse(e, phi))
-        except ValueError:
-            raise
-        except Exception as exc:  # pragma: no cover
-            raise ValueError("Failed to compute modular inverse via sympy") from exc
-
-    from math import gcd as _gcd  # local import avoids top-level dependency
-
-    if _gcd(e, phi) != 1:
-        raise ValueError("Modular inverse does not exist")
-
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError(None) from exc
-
-
-def x_mod_inverse__mutmut_37(e: int, phi: int) -> int:
-    """Return modular inverse of e mod phi."""
-    if phi <= 0:
-        raise ValueError("phi must be positive")
-
-    if SYMPY_AVAILABLE and sympy_mod_inverse is not None:
-        try:
-            return int(sympy_mod_inverse(e, phi))
-        except ValueError:
-            raise
-        except Exception as exc:  # pragma: no cover
-            raise ValueError("Failed to compute modular inverse via sympy") from exc
-
-    from math import gcd as _gcd  # local import avoids top-level dependency
-
-    if _gcd(e, phi) != 1:
-        raise ValueError("Modular inverse does not exist")
-
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("XXModular inverse does not existXX") from exc
-
-
-def x_mod_inverse__mutmut_38(e: int, phi: int) -> int:
-    """Return modular inverse of e mod phi."""
-    if phi <= 0:
-        raise ValueError("phi must be positive")
-
-    if SYMPY_AVAILABLE and sympy_mod_inverse is not None:
-        try:
-            return int(sympy_mod_inverse(e, phi))
-        except ValueError:
-            raise
-        except Exception as exc:  # pragma: no cover
-            raise ValueError("Failed to compute modular inverse via sympy") from exc
-
-    from math import gcd as _gcd  # local import avoids top-level dependency
-
-    if _gcd(e, phi) != 1:
-        raise ValueError("Modular inverse does not exist")
-
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("modular inverse does not exist") from exc
-
-
-def x_mod_inverse__mutmut_39(e: int, phi: int) -> int:
-    """Return modular inverse of e mod phi."""
-    if phi <= 0:
-        raise ValueError("phi must be positive")
-
-    if SYMPY_AVAILABLE and sympy_mod_inverse is not None:
-        try:
-            return int(sympy_mod_inverse(e, phi))
-        except ValueError:
-            raise
-        except Exception as exc:  # pragma: no cover
-            raise ValueError("Failed to compute modular inverse via sympy") from exc
-
-    from math import gcd as _gcd  # local import avoids top-level dependency
-
-    if _gcd(e, phi) != 1:
-        raise ValueError("Modular inverse does not exist")
-
-    try:
-        return pow(e % phi, -1, phi)
-    except ValueError as exc:  # pragma: no cover - unexpected for coprime inputs
-        raise ValueError("MODULAR INVERSE DOES NOT EXIST") from exc
+    return pow(e % phi, -2, phi)
 
 x_mod_inverse__mutmut_mutants : ClassVar[MutantDict] = {
 'x_mod_inverse__mutmut_1': x_mod_inverse__mutmut_1, 
@@ -1128,11 +924,7 @@ x_mod_inverse__mutmut_mutants : ClassVar[MutantDict] = {
     'x_mod_inverse__mutmut_32': x_mod_inverse__mutmut_32, 
     'x_mod_inverse__mutmut_33': x_mod_inverse__mutmut_33, 
     'x_mod_inverse__mutmut_34': x_mod_inverse__mutmut_34, 
-    'x_mod_inverse__mutmut_35': x_mod_inverse__mutmut_35, 
-    'x_mod_inverse__mutmut_36': x_mod_inverse__mutmut_36, 
-    'x_mod_inverse__mutmut_37': x_mod_inverse__mutmut_37, 
-    'x_mod_inverse__mutmut_38': x_mod_inverse__mutmut_38, 
-    'x_mod_inverse__mutmut_39': x_mod_inverse__mutmut_39
+    'x_mod_inverse__mutmut_35': x_mod_inverse__mutmut_35
 }
 
 def mod_inverse(*args, **kwargs):
@@ -2323,31 +2115,41 @@ x_calculate_entropy__mutmut_orig.__name__ = 'x_calculate_entropy'
 def x_validate_entropy_bounds__mutmut_orig(n: int, expected_min_bits: float) -> None:
     entropy = calculate_entropy(n)
     if entropy < expected_min_bits:
-        raise ValueError(f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}")
+        raise ValueError(
+            f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}"
+        )
 
 
 def x_validate_entropy_bounds__mutmut_1(n: int, expected_min_bits: float) -> None:
     entropy = None
     if entropy < expected_min_bits:
-        raise ValueError(f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}")
+        raise ValueError(
+            f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}"
+        )
 
 
 def x_validate_entropy_bounds__mutmut_2(n: int, expected_min_bits: float) -> None:
     entropy = calculate_entropy(None)
     if entropy < expected_min_bits:
-        raise ValueError(f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}")
+        raise ValueError(
+            f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}"
+        )
 
 
 def x_validate_entropy_bounds__mutmut_3(n: int, expected_min_bits: float) -> None:
     entropy = calculate_entropy(n)
     if entropy <= expected_min_bits:
-        raise ValueError(f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}")
+        raise ValueError(
+            f"Entropy {entropy:.2f} bits is below expected minimum {expected_min_bits}"
+        )
 
 
 def x_validate_entropy_bounds__mutmut_4(n: int, expected_min_bits: float) -> None:
     entropy = calculate_entropy(n)
     if entropy < expected_min_bits:
-        raise ValueError(None)
+        raise ValueError(
+            None
+        )
 
 x_validate_entropy_bounds__mutmut_mutants : ClassVar[MutantDict] = {
 'x_validate_entropy_bounds__mutmut_1': x_validate_entropy_bounds__mutmut_1, 
