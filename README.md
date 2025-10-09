@@ -21,7 +21,6 @@ Build understanding through math, logic, and real cryptographic theory. **All st
 
 Whether you're a **teacher**, a **CS student**,or just **someone fascinated by how passwords work**, this tool was built for you.
 
-📚 New to the workflow? See [CONTRIBUTING.md](CONTRIBUTING.md) and the [AI-Assisted Quality Playbook](docs/ai-assisted-quality-playbook.md) before landing changes.
 
 ## Features
 
